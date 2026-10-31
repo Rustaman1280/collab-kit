@@ -1,0 +1,22 @@
+name: "Collab Kit Trailer Validator"
+description: "Validates git commit trailers and co-authorship metadata for pull requests"
+author: "Rustaman Delvianova"
+
+inputs:
+  range:
+    description: "Commit range to inspect"
+    required: false
+    default: "origin/main..HEAD"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Validate PR Commit Trailers
+      shell: bash
+      run: |
+        node ${{ github.action_path }}/dist/cli.js credits "${{ inputs.range }}"
