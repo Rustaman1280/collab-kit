@@ -5,3 +5,5 @@
 
 export * from "./types.js";
 export * from "./trailers.js";
+export * from "./git.js";
+export * from "./attribution.js";

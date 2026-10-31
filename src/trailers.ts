@@ -13,7 +13,10 @@ const SIMPLE_EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * Extracts and parses git trailers from a raw commit message string.
  */
 export function parseCommitMessage(rawMessage: string): ParsedCommitMessage {
-  const normalized = rawMessage.replace(/\r\n/g, "\n").trim();
+  let normalized = rawMessage.replace(/\r\n/g, "\n").trim();
+  if (!normalized.includes("\n") && normalized.includes("\\n")) {
+    normalized = normalized.replace(/\\n/g, "\n");
+  }
   const lines = normalized.split("\n");
 
   if (lines.length === 0 || !lines[0]) {
