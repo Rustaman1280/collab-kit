@@ -1,0 +1,29 @@
+{
+  "name": "@crustdev/collab-kit",
+  "version": "0.1.0",
+  "description": "Developer toolkit for distributed engineering collectives and pair-programming workflows",
+  "type": "module",
+  "author": "Rustaman Delvianova <rustaman@crusts.dev>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "collab-kit": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test tests/*.test.js || ts-node --test tests/*.test.ts || node --test dist/tests/*.test.js",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "co-author",
+    "git-trailers",
+    "collaboration",
+    "developer-tools",
+    "pair-programming",
+    "crustdev"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
