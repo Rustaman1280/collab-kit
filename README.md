@@ -8,3 +8,4 @@ Collaborative utilities and developer automation workflows.
 - Step 6: Automated team workflow 6
 - Step 7: Automated team workflow 7
 - Step 8: Automated team workflow 8
+- Step 9: Automated team workflow 9
