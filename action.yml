@@ -2,6 +2,10 @@ name: "Collab Kit Trailer Validator"
 description: "Validates git commit trailers and co-authorship metadata for pull requests"
 author: "Rustaman Delvianova"
 
+branding:
+  icon: "users"
+  color: "purple"
+
 inputs:
   range:
     description: "Commit range to inspect"
