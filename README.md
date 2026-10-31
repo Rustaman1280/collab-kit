@@ -1,2 +1,2 @@
-# collab-kit
-Collaborative developer tools and workflow automation
+# Collab Kit
+Collaborative utilities and developer automation workflows.
